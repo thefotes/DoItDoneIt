@@ -1,3 +1,3 @@
--[] Write the codes
--[] Eat the pizza
--[] Win the trivia
+-[x] Write the codes
+-[x] Eat the pizza
+- [ ] Win the trivia
