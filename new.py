@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 import os.path
 import time
 from time import strftime
