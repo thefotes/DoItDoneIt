@@ -14,7 +14,7 @@ def date_to_append():
 def rename_file(the_file):
     base = os.path.basename(the_file)
     split_up = os.path.splitext(base)
-    file_name = os.path.splitext(base)[0]
+    file_name = split_up[0]
     file_extension = split_up[1]
     new_file_name = "%s%s%s" % (file_name, date_to_append(), file_extension)
     os.rename(the_file, new_file_name)
