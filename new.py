@@ -22,7 +22,18 @@ def rename_file(the_file):
 def move_old_todo():
     for filename in os.listdir("."):
         if filename.startswith('todo'):
-            shutil.move(filename, 'Archive')
+            if file_already_exists(filename):
+                print "Already Exists"
+            else:
+                shutil.move(filename, 'Archive')
+
+def file_already_exists(thefile):
+    archive_path = os.path.abspath('Archive')
+    files_in_archive = os.listdir(archive_path)
+    if thefile in files_in_archive:
+        return True
+    else:
+        return False
 
 def create_new_todo():
     open(FILE, 'w')
