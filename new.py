@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+
 import os.path
 import time
 from time import strftime
@@ -7,6 +8,7 @@ import sys
 import shutil
 
 FILE = 'todo.md'
+template = 'template.md'
 
 def date_to_append():
     return strftime("%m-%d-%Y", time.gmtime(os.path.getctime(FILE)))
@@ -36,8 +38,10 @@ def file_already_exists(thefile):
         return False
 
 def create_new_todo():
-    open(FILE, 'w')
+    shutil.copyfile(template, 'todo.md')
 
-rename_file(FILE)
-move_old_todo()
+if os.path.isfile(FILE):
+  rename_file(FILE)
+  move_old_todo()
+
 create_new_todo()
