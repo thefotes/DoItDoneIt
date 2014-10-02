@@ -38,7 +38,17 @@ def file_already_exists(thefile):
         return False
 
 def create_new_todo():
-    shutil.copyfile(template, 'todo.md')
+    f = open(template, 'r')
+    contents = ''
+    for line in f:
+      if '<date>' in line:
+        contents += line.replace('<date>', strftime('%m-%d-%Y'))
+      else:
+        contents += line
+    f.close()
+    f = open('todo.md', 'w')
+    f.write(contents)
+    f.close()
 
 if os.path.isfile(FILE):
   rename_file(FILE)

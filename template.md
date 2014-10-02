@@ -1,5 +1,5 @@
-# Stuff Todo Today
-------------------
+# <date>
+------------
 
 - [x] Write the codes
 - [x] Eat the pizza
