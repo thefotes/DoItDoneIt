@@ -1,7 +1,13 @@
 # <date>
-------------
+============
 
-- [x] Write the codes
-- [x] Eat the pizza
-- [] Win the trivia
-- [] Fix error when todo already exists
+  - [x] Write the codes
+  - [x] Eat the pizza
+  - [ ] Win the trivia
+  - [ ] Fix error when todo already exists
+
+## Notes
+--------
+
+  * I should star [DoItDoneIt](https://github.com/thefotes/DoItDoneIt).
+
